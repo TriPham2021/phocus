@@ -143,8 +143,41 @@ h3 {
 .article-section {
   margin-top: 3rem;
 }
+.article-section__label {
+  margin-bottom: 0.5rem;
+  color: var(--color-moss);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 .article-section__title {
+  margin-bottom: 1.25rem;
   font-size: var(--text-xl);
+}
+.article-body > * + * {
+  margin-top: 1.5rem;
+}
+.article-body p {
+  max-width: 68ch;
+}
+.article-quote {
+  margin: 2rem 0;
+  padding-left: clamp(1rem, 3vw, 2rem);
+  border-left: 2px solid var(--color-forest);
+  color: var(--color-forest);
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+}
+.article-quote p {
+  margin-bottom: 1rem;
+}
+.article-quote footer {
+  color: var(--color-moss);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.5;
 }
 .article-figure {
   margin: 2.5rem 0;

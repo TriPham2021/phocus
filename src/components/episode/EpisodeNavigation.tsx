@@ -5,19 +5,20 @@ interface EpisodeNavigationProps {
   previous?: Episode
   next?: Episode
 }
+
 export function EpisodeNavigation({ previous, next }: EpisodeNavigationProps) {
   return (
     <nav
-      className="mt-12 flex justify-between border-t border-[var(--color-rule)] pt-6 text-sm"
-      aria-label="Episode navigation"
+      className="mt-12 flex flex-wrap justify-between gap-4 border-t border-[var(--color-rule)] pt-6 text-sm"
+      aria-label="Chapter navigation"
     >
       <span>
         {previous && (
-          <Link to={`/episodes/${previous.id}`}>← Episode {previous.id}</Link>
+          <Link to={`/episodes/${previous.id}`}>&larr; Chapter {previous.id}</Link>
         )}
       </span>
       <span>
-        {next && <Link to={`/episodes/${next.id}`}>Episode {next.id} →</Link>}
+        {next && <Link to={`/episodes/${next.id}`}>Chapter {next.id} &rarr;</Link>}
       </span>
     </nav>
   )

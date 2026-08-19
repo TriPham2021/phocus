@@ -10,7 +10,9 @@ export function SidebarTableOfContents({ sections }: SidebarTableOfContentsProps
       <ol className="space-y-2">
         {sections.map((section) => (
           <li key={section.id}>
-            <a href={`#${section.id}`}>{section.title}</a>
+            <a href={`#${section.id}`}>
+              {section.number}. {section.title}
+            </a>
           </li>
         ))}
       </ol>

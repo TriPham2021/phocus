@@ -24,7 +24,7 @@ export function SiteHeader() {
           <div className="flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-sm lg:w-auto">
             {episodes.map((episode) => (
               <NavLink key={episode.id} to={`/episodes/${episode.id}`}>
-                Episode {episode.id}
+                Chapter {episode.id}
               </NavLink>
             ))}
             {navigationLinks.map((link) => (
