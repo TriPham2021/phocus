@@ -102,6 +102,9 @@ h3 {
 .site-shell main {
   flex: 1;
 }
+.site-masthead {
+  font-family: 'Times New Roman', Times, serif;
+}
 .page-container {
   width: min(100% - (var(--space-page) * 2), var(--content-width));
   margin-inline: auto;

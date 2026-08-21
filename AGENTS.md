@@ -1,10 +1,10 @@
-# HÀ NỘI JOURNAL — Agent Guide
+# Phốcus — Agent Guide
 
 This file is the shared operating guide for all agents working in this repository. Read it before making changes. It defines the current architecture, project conventions, and completion requirements.
 
 ## Project purpose
 
-HÀ NỘI JOURNAL is a multi-page editorial website about the historical evolution of Hanoi's urban planning and infrastructure, from the imperial era to the present.
+Phốcus is a multi-page editorial website about the historical evolution of Hanoi's urban planning and infrastructure, from the imperial era to the present.
 
 The product should feel like a professional digital journal: architectural, historical, modern, restrained, and highly readable. It is not a corporate landing page, SaaS product, blog template, or playful experience.
 

@@ -1,4 +1,4 @@
-# HÀ NỘI JOURNAL
+# Phốcus
 
 An editorial website about Hanoi's urban planning and infrastructure.
 
