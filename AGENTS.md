@@ -93,6 +93,10 @@ Episodes are independent editorial pages but share a common layout. Reuse and ex
 
 When expanding the content model, update `src/types/episode.ts` first, then `src/data/episodes/episodes.ts`, then the rendering components. Section IDs must be unique within an episode, URL-safe, and stable because table-of-contents links depend on them.
 
+### Verbatim editorial copy
+
+When a user supplies long-form paragraph content, store and render it verbatim. Do not summarize, paraphrase, correct spelling or grammar, alter capitalization or punctuation, or add historical context unless the user explicitly requests those edits. Source formatting may wrap the text across lines for readability, but it must not change the rendered copy. Preserve intentional inline emphasis using the existing rich-text segment structure.
+
 ## Component and TypeScript conventions
 
 - Use functional components and named exports for components.
@@ -133,6 +137,7 @@ Every interface must be scalable and responsive across mobile, tablet, and deskt
 For every new or modified UI component:
 
 - Support a minimum 320px viewport with no horizontal page scrolling.
+- Treat any horizontal page scroll at mobile widths as a defect. Fix the overflowing element or layout constraint; do not rely solely on hiding overflow to mask it.
 - Use fluid and content-aware sizing (`min()`, `max()`, `clamp()`, responsive Tailwind utilities, flexible grid/flex layouts) rather than fixed viewport-dependent widths.
 - Let navigation, metadata, action groups, and cards wrap, stack, collapse, or scroll intentionally when horizontal space is insufficient.
 - Set `min-width: 0` on flex or grid children that contain potentially long content where needed.

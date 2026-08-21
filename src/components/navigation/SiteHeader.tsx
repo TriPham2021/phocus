@@ -24,7 +24,7 @@ export function SiteHeader() {
           >
             {'Ph\u00f4\u0301cus'}
           </Link>
-          <div className="flex w-full flex-wrap items-center gap-x-5 gap-y-2 text-sm lg:w-auto">
+          <div className="flex w-full flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:gap-x-5 lg:w-auto">
             <div
               className="relative"
               onMouseEnter={() => setIsChaptersOpen(true)}
@@ -39,7 +39,7 @@ export function SiteHeader() {
               <button
                 aria-controls="chapter-menu"
                 aria-expanded={isChaptersOpen}
-                className="px-2 py-1 transition-colors hover:bg-[var(--color-muted-paper)] focus-visible:bg-[var(--color-muted-paper)]"
+                className="inline-flex min-h-11 items-center px-2 py-1 transition-colors hover:bg-[var(--color-muted-paper)] focus-visible:bg-[var(--color-muted-paper)]"
                 onClick={() => setIsChaptersOpen((isOpen) => !isOpen)}
                 onFocus={() => setIsChaptersOpen(true)}
                 type="button"
@@ -47,12 +47,12 @@ export function SiteHeader() {
                 Chapters
               </button>
               {isChaptersOpen && (
-                <div className="absolute left-0 z-10 mt-2 w-72 max-w-[calc(100vw-2.5rem)] border border-[var(--color-rule)] bg-[var(--color-paper)] p-3 shadow-sm">
+                <div className="chapter-menu absolute left-0 z-10 mt-2 border border-[var(--color-rule)] bg-[var(--color-paper)] p-3 shadow-sm">
                   <ul className="space-y-1" id="chapter-menu" aria-label="Chapters">
                     {episodes.map((episode) => (
                       <li key={episode.id}>
                         <NavLink
-                          className="block py-2 leading-snug"
+                          className="block min-h-11 py-2 leading-snug"
                           onClick={() => setIsChaptersOpen(false)}
                           to={`/episodes/${episode.id}`}
                         >
@@ -66,7 +66,11 @@ export function SiteHeader() {
               )}
             </div>
             {navigationLinks.map((link) => (
-              <NavLink key={link.to} to={link.to}>
+              <NavLink
+                className="inline-flex min-h-11 items-center py-1"
+                key={link.to}
+                to={link.to}
+              >
                 {link.label}
               </NavLink>
             ))}
