@@ -1,14 +1,14 @@
 import { PageContainer } from '../../components/layout/PageContainer'
+import { PageIntro } from '../../components/layout/PageIntro'
+
 export function AboutPage() {
   return (
     <PageContainer>
-      <section className="page-intro">
-        <p className="eyebrow">About the project</p>
-        <h1 className="page-title">A journal of Hanoi’s built environment.</h1>
-        <p className="page-summary">
-          Project context and editorial methodology will appear here.
-        </p>
-      </section>
+      <PageIntro
+        eyebrow="About the project"
+        summary={'Project context and editorial methodology will appear here.'}
+        title={'A journal of Hanoi\u2019s built environment.'}
+      />
     </PageContainer>
   )
 }

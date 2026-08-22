@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import { PageContainer } from '../components/layout/PageContainer'
+import { PageIntro } from '../components/layout/PageIntro'
+
 export function NotFoundPage() {
   return (
     <PageContainer>
-      <section className="page-intro">
-        <p className="eyebrow">404</p>
-        <h1 className="page-title">This page is not in the journal.</h1>
+      <PageIntro eyebrow="404" title="This page is not in the journal.">
         <Link to="/">Return home</Link>
-      </section>
+      </PageIntro>
     </PageContainer>
   )
 }

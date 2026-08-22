@@ -1,15 +1,16 @@
 import { PageContainer } from '../../components/layout/PageContainer'
+import { PageIntro } from '../../components/layout/PageIntro'
+
 export function HomePage() {
   return (
     <PageContainer>
-      <section className="page-intro">
-        <p className="eyebrow">Urban Planning &amp; Infrastructure</p>
-        <h1 className="page-title">Hà Nội, read through its evolving urban form.</h1>
-        <p className="page-summary">
-          A forthcoming visual journal documenting the city’s historical planning and
-          infrastructure.
-        </p>
-      </section>
+      <PageIntro
+        eyebrow="Urban Planning & Infrastructure"
+        summary={
+          'A forthcoming visual journal documenting the city\u2019s historical planning and infrastructure.'
+        }
+        title={'H\u00e0 N\u1ed9i, read through its evolving urban form.'}
+      />
     </PageContainer>
   )
 }

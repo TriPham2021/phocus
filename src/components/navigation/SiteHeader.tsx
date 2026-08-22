@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { episodes } from '../../data/episodes/episodes'
 import { PageContainer } from '../layout/PageContainer'
@@ -10,6 +10,34 @@ const navigationLinks = [
 
 export function SiteHeader() {
   const [isChaptersOpen, setIsChaptersOpen] = useState(false)
+  const closeTimer = useRef<number | undefined>(undefined)
+
+  const clearCloseTimer = () => {
+    if (closeTimer.current !== undefined) {
+      window.clearTimeout(closeTimer.current)
+      closeTimer.current = undefined
+    }
+  }
+
+  const openChapters = () => {
+    clearCloseTimer()
+    setIsChaptersOpen(true)
+  }
+
+  const closeChapters = () => {
+    clearCloseTimer()
+    closeTimer.current = window.setTimeout(() => {
+      setIsChaptersOpen(false)
+      closeTimer.current = undefined
+    }, 200)
+  }
+
+  const closeChaptersImmediately = () => {
+    clearCloseTimer()
+    setIsChaptersOpen(false)
+  }
+
+  useEffect(() => clearCloseTimer, [])
 
   return (
     <header className="border-b border-[var(--color-rule)]">
@@ -27,11 +55,11 @@ export function SiteHeader() {
           <div className="flex w-full flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:gap-x-5 lg:w-auto">
             <div
               className="relative"
-              onMouseEnter={() => setIsChaptersOpen(true)}
-              onMouseLeave={() => setIsChaptersOpen(false)}
+              onMouseEnter={openChapters}
+              onMouseLeave={closeChapters}
               onKeyDown={(event) => {
                 if (event.key === 'Escape') {
-                  setIsChaptersOpen(false)
+                  closeChaptersImmediately()
                   event.currentTarget.querySelector('button')?.focus()
                 }
               }}
@@ -40,8 +68,11 @@ export function SiteHeader() {
                 aria-controls="chapter-menu"
                 aria-expanded={isChaptersOpen}
                 className="inline-flex min-h-11 items-center px-2 py-1 transition-colors hover:bg-[var(--color-muted-paper)] focus-visible:bg-[var(--color-muted-paper)]"
-                onClick={() => setIsChaptersOpen((isOpen) => !isOpen)}
-                onFocus={() => setIsChaptersOpen(true)}
+                onClick={() => {
+                  clearCloseTimer()
+                  setIsChaptersOpen((isOpen) => !isOpen)
+                }}
+                onFocus={openChapters}
                 type="button"
               >
                 Chapters
@@ -53,7 +84,7 @@ export function SiteHeader() {
                       <li key={episode.id}>
                         <NavLink
                           className="block min-h-11 py-2 leading-snug"
-                          onClick={() => setIsChaptersOpen(false)}
+                          onClick={closeChaptersImmediately}
                           to={`/episodes/${episode.id}`}
                         >
                           Chapter {episode.id}
