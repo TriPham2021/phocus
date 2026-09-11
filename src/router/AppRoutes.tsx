@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { AboutPage } from '../pages/About/AboutPage'
+import { ChaptersPage } from '../pages/Chapters/ChaptersPage'
 import { EpisodePage } from '../pages/Episode/EpisodePage'
 import { HomePage } from '../pages/Home/HomePage'
 import { NotFoundPage } from '../pages/NotFoundPage'
@@ -9,6 +10,7 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/chapters" element={<ChaptersPage />} />
       <Route path="/episodes/:episodeId" element={<EpisodePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/references" element={<ReferencesPage />} />

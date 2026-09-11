@@ -48,6 +48,7 @@ index.html
 | Route                  | Page                  |
 | ---------------------- | --------------------- |
 | `/`                    | Home                  |
+| `/chapters`            | Chapter portal         |
 | `/episodes/:episodeId` | Reusable chapter page |
 | `/about`               | Project context       |
 | `/references`          | General references    |
@@ -64,6 +65,7 @@ src/
   index.css                       Tokens, resets, shared layout, responsive rules
   router/AppRoutes.tsx            Route declarations
   pages/                          Route-level composition
+    Chapters/                      Chapter portal
   components/
     layout/                       Shared page and site-layout primitives
     navigation/                   Header and primary navigation

@@ -92,6 +92,15 @@ export function SiteHeader() {
                         </NavLink>
                       </li>
                     ))}
+                    <li className="chapter-menu__more">
+                      <NavLink
+                        className="block min-h-11 py-2 leading-snug"
+                        onClick={closeChaptersImmediately}
+                        to="/chapters"
+                      >
+                        More
+                      </NavLink>
+                    </li>
                   </ul>
                 </div>
               )}
