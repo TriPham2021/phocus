@@ -26,6 +26,11 @@
   --color-rule: rgba(26, 25, 24, 0.14);
   --color-forest: #3a5a40;
   --color-moss: #4a5d6e;
+  --dark-bg: #121314;
+  --dark-panel: #1a1c1d;
+  --dark-text: #f2eadd;
+  --dark-muted: rgba(242, 234, 221, 0.74);
+  --dark-rule: rgba(242, 234, 221, 0.12);
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', sans-serif;
@@ -70,6 +75,128 @@ body {
   letter-spacing: -0.01em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+:root[data-theme='dark'] {
+  --color-ink: var(--dark-text);
+  --color-paper: var(--dark-bg);
+  --color-muted-paper: var(--dark-panel);
+  --color-rule: var(--dark-rule);
+  --color-forest: #a8b8a5;
+  --color-moss: #c7d1c9;
+  --color-slate: #c9c3b4;
+  --color-brick: #d28360;
+  --color-ochre: #d7b77c;
+}
+
+:root[data-theme='dark'] body {
+  color: var(--dark-text);
+  background: linear-gradient(180deg, rgba(18, 19, 20, 0.96), rgba(18, 19, 20, 1));
+}
+
+:root[data-theme='dark'] a:hover {
+  color: var(--color-ochre);
+}
+
+:root[data-theme='dark'] .site-masthead,
+:root[data-theme='dark'] h1,
+:root[data-theme='dark'] h2,
+:root[data-theme='dark'] h3,
+:root[data-theme='dark'] .page-summary,
+:root[data-theme='dark'] .article-quote,
+:root[data-theme='dark'] .article-quote footer,
+:root[data-theme='dark'] .eyebrow,
+:root[data-theme='dark'] .article-section__label,
+:root[data-theme='dark'] .article-caption,
+:root[data-theme='dark'] .chapter-portal__number,
+:root[data-theme='dark'] .chapter-portal__title,
+:root[data-theme='dark'] .chapter-portal__description,
+:root[data-theme='dark'] .chapter-portal__arrow,
+:root[data-theme='dark'] .site-shell footer,
+:root[data-theme='dark'] .chapter-menu {
+  color: var(--dark-text);
+}
+
+:root[data-theme='dark'] .site-shell footer {
+  background: rgba(26, 28, 29, 0.9);
+}
+
+:root[data-theme='dark'] .chapter-menu,
+:root[data-theme='dark'] .article-figure__placeholder,
+:root[data-theme='dark'] .page-container,
+:root[data-theme='dark'] .site-masthead,
+:root[data-theme='dark'] .site-shell main,
+:root[data-theme='dark'] .site-shell footer {
+  border-color: var(--dark-rule);
+}
+
+:root[data-theme='dark'] .article-figure__placeholder,
+:root[data-theme='dark'] .chapter-menu,
+:root[data-theme='dark'] .site-shell footer,
+:root[data-theme='dark'] .site-shell header {
+  background-color: var(--dark-panel);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-ink: var(--dark-text);
+    --color-paper: var(--dark-bg);
+    --color-muted-paper: var(--dark-panel);
+    --color-rule: var(--dark-rule);
+    --color-forest: #a8b8a5;
+    --color-moss: #c7d1c9;
+    --color-slate: #c9c3b4;
+    --color-brick: #d28360;
+    --color-ochre: #d7b77c;
+  }
+
+  :root:not([data-theme='light']) body {
+    color: var(--dark-text);
+    background: linear-gradient(180deg, rgba(18, 19, 20, 0.96), rgba(18, 19, 20, 1));
+  }
+
+  :root:not([data-theme='light']) a:hover {
+    color: var(--color-ochre);
+  }
+
+  :root:not([data-theme='light']) .site-masthead,
+  :root:not([data-theme='light']) h1,
+  :root:not([data-theme='light']) h2,
+  :root:not([data-theme='light']) h3,
+  :root:not([data-theme='light']) .page-summary,
+  :root:not([data-theme='light']) .article-quote,
+  :root:not([data-theme='light']) .article-quote footer,
+  :root:not([data-theme='light']) .eyebrow,
+  :root:not([data-theme='light']) .article-section__label,
+  :root:not([data-theme='light']) .article-caption,
+  :root:not([data-theme='light']) .chapter-portal__number,
+  :root:not([data-theme='light']) .chapter-portal__title,
+  :root:not([data-theme='light']) .chapter-portal__description,
+  :root:not([data-theme='light']) .chapter-portal__arrow,
+  :root:not([data-theme='light']) .site-shell footer,
+  :root:not([data-theme='light']) .chapter-menu {
+    color: var(--dark-text);
+  }
+
+  :root:not([data-theme='light']) .site-shell footer {
+    background: rgba(26, 28, 29, 0.9);
+  }
+
+  :root:not([data-theme='light']) .chapter-menu,
+  :root:not([data-theme='light']) .article-figure__placeholder,
+  :root:not([data-theme='light']) .page-container,
+  :root:not([data-theme='light']) .site-masthead,
+  :root:not([data-theme='light']) .site-shell main,
+  :root:not([data-theme='light']) .site-shell footer {
+    border-color: var(--dark-rule);
+  }
+
+  :root:not([data-theme='light']) .article-figure__placeholder,
+  :root:not([data-theme='light']) .chapter-menu,
+  :root:not([data-theme='light']) .site-shell footer,
+  :root:not([data-theme='light']) .site-shell header {
+    background-color: var(--dark-panel);
+  }
 }
 
 a {
@@ -149,6 +276,28 @@ h3 {
 .site-shell main {
   flex: 1;
   min-width: 0;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-rule);
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--color-muted-paper);
 }
 .site-masthead {
   display: inline-flex;

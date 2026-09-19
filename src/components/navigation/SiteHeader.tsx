@@ -8,8 +8,18 @@ const navigationLinks = [
   { label: 'References', to: '/references' },
 ]
 
+const THEME_STORAGE_KEY = 'phocus-theme'
+
 export function SiteHeader() {
   const [isChaptersOpen, setIsChaptersOpen] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY)
+    if (savedTheme) {
+      return savedTheme === 'dark'
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
   const closeTimer = useRef<number | undefined>(undefined)
 
   const clearCloseTimer = () => {
@@ -38,6 +48,26 @@ export function SiteHeader() {
   }
 
   useEffect(() => clearCloseTimer, [])
+
+  useEffect(() => {
+    const root = document.documentElement
+    root.dataset.theme = isDarkMode ? 'dark' : 'light'
+    window.localStorage.setItem(THEME_STORAGE_KEY, isDarkMode ? 'dark' : 'light')
+  }, [isDarkMode])
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleThemeChange = (event: MediaQueryListEvent) => {
+      const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY)
+      if (!savedTheme) {
+        setIsDarkMode(event.matches)
+      }
+    }
+
+    mediaQuery.addEventListener('change', handleThemeChange)
+
+    return () => mediaQuery.removeEventListener('change', handleThemeChange)
+  }, [])
 
   return (
     <header className="border-b border-[var(--color-rule)]">
@@ -112,6 +142,16 @@ export function SiteHeader() {
                 {link.label}
               </NavLink>
             ))}
+            <button
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-pressed={isDarkMode}
+              className="theme-toggle"
+              onClick={() => setIsDarkMode((previous) => !previous)}
+              type="button"
+            >
+              <span aria-hidden="true">{isDarkMode ? '☀' : '☾'}</span>
+              <span>{isDarkMode ? 'Light' : 'Dark'}</span>
+            </button>
           </div>
         </nav>
       </PageContainer>
