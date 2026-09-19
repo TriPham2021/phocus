@@ -1,6 +1,8 @@
+Emperor Lý Thái Tổ, upon moving the capital from Hoa Lư (modern day Ninh Bình) to Thăng Long, the precursor of modern Hanoi, described the terrain in his Edict on the transfer of the Capital (Chiếu dời đô): 
+
 > The land is both spacious and level, the ground elevated and open; the people are spared the hardships of low-lying, gloomy surroundings, and all things flourish in abundant vitality. Surveying the entire realm of the Viet, this is a truly magnificent location, where the four directions converge, and is truly suited to serve as the High Capital for ages to come.
 >
-> — Emperor Lý Thái Tổ, Edict on the Transfer of the Capital (Chiếu dời đô), Đại Việt Sử ký toàn thư
+> — Đại Việt Sử ký toàn thư
 
 Indeed, the predictions and ambition he had for the site on which the Vietnamese Capital still sits on today would be realized by successors over the next millenia. Even over numerous changes of Imperial Dynasties, wars and invasions, and the recent upheavals from the 19th Century onward, Hanoi has remained a bastion of political dominance and socioeconomic prosperity, anchoring the entire nation across multiple successive regimes: from the Lý, Trần, and Lê to the Socialist Republic of today.
 
