@@ -46,11 +46,9 @@ export function SiteHeader() {
           className="flex min-h-18 flex-col items-start justify-between gap-3 py-4 lg:flex-row lg:items-center lg:gap-6"
           aria-label="Primary navigation"
         >
-          <Link
-            className="site-masthead text-lg tracking-wide text-[var(--color-forest)]"
-            to="/"
-          >
-            {'Ph\u00f4\u0301cus'}
+          <Link className="site-masthead" to="/">
+            <span className="site-masthead__accent">(phố)</span>
+            <span>cus</span>
           </Link>
           <div className="flex w-full flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:gap-x-5 lg:w-auto">
             <div
