@@ -1,7 +1,10 @@
-import introductionMarkdown from './chapter-1/introduction.md?raw'
+import introductionMarkdown from './chapter-1/01-introduction.md?raw'
 import chapter2IntroductionMarkdown from './chapter-2/introduction.md?raw'
 import chapter3IntroductionMarkdown from './chapter-3/introduction.md?raw'
 import chapter4IntroductionMarkdown from './chapter-4/introduction.md?raw'
+
+import chapter1o4 from './chapter-1/04-hanoi-nguyen.md?raw'
+
 import type { Episode } from '../../types/episode'
 import { parseArticleMarkdown } from '../../utils/articleMarkdown'
 
@@ -39,8 +42,8 @@ export const episodes: Episode[] = [
       {
         id: 'contemporary-afterlives',
         number: 4,
-        title: 'Contemporary Afterlives',
-        blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme'),
+        title: 'HÀ NỘI: Nguyễn Dynasty (1802-1883)',
+        blocks: parseArticleMarkdown(chapter1o4),
       },
     ],
   },
