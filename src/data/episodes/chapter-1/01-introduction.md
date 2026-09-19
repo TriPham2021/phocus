@@ -1,4 +1,4 @@
-Emperor Lý Thái Tổ, upon moving the capital from Hoa Lư (modern day Ninh Bình) to Thăng Long, the precursor of modern Hanoi, described the terrain in his Edict on the transfer of the Capital (Chiếu dời đô): 
+Emperor Lý Thái Tổ, upon moving the capital from Hoa Lư (modern day Ninh Bình) to Thăng Long, the precursor of modern Hanoi, described the terrain in his Edict on the transfer of the Capital (Chiếu dời đô) : 
 
 > The land is both spacious and level, the ground elevated and open; the people are spared the hardships of low-lying, gloomy surroundings, and all things flourish in abundant vitality. Surveying the entire realm of the Viet, this is a truly magnificent location, where the four directions converge, and is truly suited to serve as the High Capital for ages to come.
 >
