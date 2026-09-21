@@ -1,9 +1,9 @@
-import introductionMarkdown from './chapter-1/01-introduction.md?raw'
-import chapter2IntroductionMarkdown from './chapter-2/introduction.md?raw'
-import chapter3IntroductionMarkdown from './chapter-3/introduction.md?raw'
-import chapter4IntroductionMarkdown from './chapter-4/introduction.md?raw'
+import chapter0of1 from './chapter-1/00-introduction.md?raw'
+import chapter0of2 from './chapter-2/00-introduction.md?raw'
+import chapter0of3 from './chapter-3/00-introduction.md?raw'
+import chapter0of4 from './chapter-4/00-introduction.md?raw'
 
-import chapter1o4 from './chapter-1/04-hanoi-nguyen.md?raw'
+import chapter4of1 from './chapter-1/04-hanoi-nguyen.md?raw'
 
 import type { Episode } from '../../types/episode'
 import { parseArticleMarkdown } from '../../utils/articleMarkdown'
@@ -19,7 +19,7 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(introductionMarkdown),
+        blocks: parseArticleMarkdown(chapter0of1),
       },
       {
         id: 'foundations',
@@ -43,7 +43,7 @@ export const episodes: Episode[] = [
         id: 'contemporary-afterlives',
         number: 4,
         title: 'HÀ NỘI: Nguyễn Dynasty (1802-1883)',
-        blocks: parseArticleMarkdown(chapter1o4),
+        blocks: parseArticleMarkdown(chapter4of1),
       },
     ],
   },
@@ -55,7 +55,7 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(chapter2IntroductionMarkdown),
+        blocks: parseArticleMarkdown(chapter0of2),
       },
     ],
   },
@@ -67,7 +67,7 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(chapter3IntroductionMarkdown),
+        blocks: parseArticleMarkdown(chapter0of3),
       },
       {
         id: 'foundations',
@@ -103,7 +103,7 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(chapter4IntroductionMarkdown),
+        blocks: parseArticleMarkdown(chapter0of4),
       },
     ],
   },
