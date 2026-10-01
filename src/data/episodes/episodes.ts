@@ -1,9 +1,13 @@
-import chapter0of1 from './chapter-1/00-introduction.md?raw'
-import chapter0of2 from './chapter-2/00-introduction.md?raw'
-import chapter0of3 from './chapter-3/00-introduction.md?raw'
-import chapter0of4 from './chapter-4/00-introduction.md?raw'
-
+import chapter1of1 from './chapter-1/01-introduction.md?raw'
 import chapter4of1 from './chapter-1/04-hanoi-nguyen.md?raw'
+import chapter2of1 from './chapter-1/02-ly-tran.md?raw'
+
+
+import chapter1of2 from './chapter-2/01-introduction.md?raw'
+import chapter1of3 from './chapter-3/01-introduction.md?raw'
+import chapter1of4 from './chapter-4/01-introduction.md?raw'
+
+
 
 import type { Episode } from '../../types/episode'
 import { parseArticleMarkdown } from '../../utils/articleMarkdown'
@@ -19,13 +23,13 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(chapter0of1),
+        blocks: parseArticleMarkdown(chapter1of1),
       },
       {
         id: 'foundations',
         number: 1,
         title: 'Foundations',
-        blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme'),
+        blocks: parseArticleMarkdown(chapter2of1),
       },
       {
         id: 'urban-form',
@@ -55,7 +59,7 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(chapter0of2),
+        blocks: parseArticleMarkdown(chapter1of2),
       },
     ],
   },
@@ -67,7 +71,7 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(chapter0of3),
+        blocks: parseArticleMarkdown(chapter1of3),
       },
       {
         id: 'foundations',
@@ -103,7 +107,7 @@ export const episodes: Episode[] = [
         id: 'introduction',
         number: 0,
         title: 'Introduction',
-        blocks: parseArticleMarkdown(chapter0of4),
+        blocks: parseArticleMarkdown(chapter1of4),
       },
     ],
   },
