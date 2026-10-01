@@ -1,6 +1,9 @@
 import chapter1of1 from './chapter-1/01-introduction.md?raw'
-import chapter4of1 from './chapter-1/04-hanoi-nguyen.md?raw'
 import chapter2of1 from './chapter-1/02-ly-tran.md?raw'
+import chapter3of1 from './chapter-1/03-le-trinh.md?raw'
+import chapter4of1 from './chapter-1/04-hanoi-nguyen.md?raw'
+
+
 
 
 import chapter1of2 from './chapter-2/01-introduction.md?raw'
@@ -35,13 +38,13 @@ export const episodes: Episode[] = [
         id: 'urban-form',
         number: 2,
         title: 'Urban Form',
-        blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme\n\nmeme'),
+        blocks: parseArticleMarkdown(chapter3of1),
       },
       {
         id: 'infrastructure',
         number: 3,
         title: 'Infrastructure',
-        blocks: parseArticleMarkdown('meme\n\nmeme'),
+        blocks: parseArticleMarkdown(chapter4of1),
       },
       {
         id: 'contemporary-afterlives',
