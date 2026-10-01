@@ -2,7 +2,7 @@ import chapter1of1 from './chapter-1/01-introduction.md?raw'
 import chapter2of1 from './chapter-1/02-ly-tran.md?raw'
 import chapter3of1 from './chapter-1/03-le-trinh.md?raw'
 import chapter4of1 from './chapter-1/04-hanoi-nguyen.md?raw'
-
+import chapter5of1 from './chapter-1/05-impact.md?raw'
 
 
 
@@ -49,8 +49,8 @@ export const episodes: Episode[] = [
       {
         id: 'contemporary-afterlives',
         number: 5,
-        title: 'HÀ NỘI: Nguyễn Dynasty (1802-1883)',
-        blocks: parseArticleMarkdown(chapter4of1),
+        title: 'Modern-day Impact',
+        blocks: parseArticleMarkdown(chapter5of1),
       },
     ],
   },
