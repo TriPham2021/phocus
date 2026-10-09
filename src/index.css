@@ -385,6 +385,30 @@ h3 {
   flex-direction: column;
   justify-content: center;
 }
+.about-hero {
+  min-height: clamp(28rem, 55vw, 40rem);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(249, 248, 246, 0.96) 0%,
+      rgba(249, 248, 246, 0.88) 38%,
+      rgba(249, 248, 246, 0.2) 100%
+    ),
+    url('./assets/images/About.jpg');
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-hero .page-container {
+  min-height: inherit;
+}
+.about-hero .page-intro {
+  display: flex;
+  min-height: inherit;
+  max-width: 42rem;
+  flex-direction: column;
+  justify-content: center;
+}
 :root[data-theme='dark'] .home-hero {
   background-image:
     linear-gradient(
@@ -394,6 +418,16 @@ h3 {
       rgba(18, 19, 20, 0.32) 100%
     ),
     url('./assets/images/Hero.jpg');
+}
+:root[data-theme='dark'] .about-hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(18, 19, 20, 0.96) 0%,
+      rgba(18, 19, 20, 0.88) 40%,
+      rgba(18, 19, 20, 0.3) 100%
+    ),
+    url('./assets/images/About.jpg');
 }
 .eyebrow {
   margin-bottom: 1rem;
@@ -416,7 +450,9 @@ h3 {
   font-size: var(--text-lg);
 }
 .about-section {
+  width: calc(100% - (var(--space-page) * 2));
   max-width: var(--content-width);
+  margin-inline: auto;
   padding-block: var(--space-section);
   border-top: 1px solid var(--color-rule);
 }

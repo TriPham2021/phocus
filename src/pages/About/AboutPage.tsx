@@ -21,28 +21,44 @@ const teamMembers = [
 
 export function AboutPage() {
   return (
-    <PageContainer>
-      <PageIntro
-        eyebrow="About the project"
-        summary={
-          'Phốcus is an independent visual journal exploring the systems, spaces, and stories that have shaped Hanoi.'
-        }
-        title={'A journal for reading Hanoi through its built environment.'}
-      />
+    <>
+      <div className="about-hero">
+        <PageContainer>
+          <PageIntro
+            eyebrow="About the project"
+            summary={
+              'Phốcus is an independent visual journal exploring the systems, spaces, and stories that have shaped Hanoi.'
+            }
+            title={'A journal for reading Hanoi through its built environment.'}
+          />
+        </PageContainer>
+      </div>
       <section className="about-section" aria-labelledby="about-introduction">
         <p className="eyebrow">The project</p>
         <h2 id="about-introduction">Looking closely at the city we inherit.</h2>
         <div className="about-section__body">
           <p>
-            Phốcus brings together urban history, visual research, and accessible
-            storytelling to consider how Hanoi has grown over time. Each chapter follows
-            the decisions, structures, and daily routines that continue to shape the
-            city today.
+            Phốcus is a website and journal about Hanoi’s urban planning and
+            infrastructure, tracing how the city’s historical planning decisions have
+            shaped the pressures it faces today. It examines the roots of congestion,
+            flooding, pollution, limited public transport, and unequal access to green
+            space, while also looking at the interventions needed to address them.
           </p>
           <p>
-            This is placeholder project copy for the developing journal. Future editions
-            will pair researched essays with maps, photography, archival material, and
-            conversations that make the built environment easier to see and discuss.
+            The project does not frame itself as a protest page, nor does it ask whether
+            Hanoi’s development has done more harm than good. The city’s growth has
+            undeniably brought benefits to millions of people who are waiting for a more
+            livable and prosperous future. Instead, it asks how development can be
+            carried out to deliver macro-level gains for the wider population while
+            protecting the micro-level communities and everyday lives directly affected
+            by it.
+          </p>
+          <p>
+            In that sense, Phốcus bridges the divide between official narratives of
+            urban progress and the lived realities of citizens whose neighborhoods are
+            reshaped by change. It presents a more nuanced picture of development as a
+            double-edged process: necessary for long-term prosperity, yet demanding care,
+            accountability, and a more human understanding of who bears its costs.
           </p>
         </div>
       </section>
@@ -63,6 +79,6 @@ export function AboutPage() {
           ))}
         </div>
       </section>
-    </PageContainer>
+    </>
   )
 }
