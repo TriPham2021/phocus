@@ -9,9 +9,18 @@ const navigationLinks = [
 ]
 
 const THEME_STORAGE_KEY = 'phocus-theme'
+const TEXT_SIZE_STORAGE_KEY = 'phocus-text-size'
+type TextSize = 'small' | 'medium' | 'large'
+const TEXT_SIZE_LEVELS: TextSize[] = ['small', 'medium', 'large']
 
 export function SiteHeader() {
   const [isChaptersOpen, setIsChaptersOpen] = useState(false)
+  const [textSize, setTextSize] = useState<TextSize>(() => {
+    const savedTextSize = window.localStorage.getItem(TEXT_SIZE_STORAGE_KEY)
+    return savedTextSize === 'small' || savedTextSize === 'large'
+      ? savedTextSize
+      : 'medium'
+  })
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY)
     if (savedTheme) {
@@ -47,6 +56,17 @@ export function SiteHeader() {
     setIsChaptersOpen(false)
   }
 
+  const changeTextSize = (direction: -1 | 1) => {
+    setTextSize((currentSize) => {
+      const currentIndex = TEXT_SIZE_LEVELS.indexOf(currentSize)
+      const nextIndex = Math.min(
+        TEXT_SIZE_LEVELS.length - 1,
+        Math.max(0, currentIndex + direction),
+      )
+      return TEXT_SIZE_LEVELS[nextIndex]
+    })
+  }
+
   useEffect(() => clearCloseTimer, [])
 
   useEffect(() => {
@@ -54,6 +74,11 @@ export function SiteHeader() {
     root.dataset.theme = isDarkMode ? 'dark' : 'light'
     window.localStorage.setItem(THEME_STORAGE_KEY, isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
+
+  useEffect(() => {
+    document.documentElement.dataset.textSize = textSize
+    window.localStorage.setItem(TEXT_SIZE_STORAGE_KEY, textSize)
+  }, [textSize])
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -142,6 +167,26 @@ export function SiteHeader() {
                 {link.label}
               </NavLink>
             ))}
+            <div className="text-size-controls" role="group" aria-label="Text size">
+              <button
+                aria-label="Decrease text size"
+                className="text-size-control"
+                disabled={textSize === 'small'}
+                onClick={() => changeTextSize(-1)}
+                type="button"
+              >
+                A&minus;
+              </button>
+              <button
+                aria-label="Increase text size"
+                className="text-size-control"
+                disabled={textSize === 'large'}
+                onClick={() => changeTextSize(1)}
+                type="button"
+              >
+                A+
+              </button>
+            </div>
             <button
               aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
               aria-pressed={isDarkMode}

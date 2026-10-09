@@ -3,14 +3,11 @@ import chapter2of1 from './chapter-1/02-ly-tran.md?raw'
 import chapter3of1 from './chapter-1/03-le-trinh.md?raw'
 import chapter4of1 from './chapter-1/04-hanoi-nguyen.md?raw'
 import chapter5of1 from './chapter-1/05-impact.md?raw'
-
-
+import chapter6of1 from './chapter-1/06-subchapter-6.md?raw'
 
 import chapter1of2 from './chapter-2/01-introduction.md?raw'
 import chapter1of3 from './chapter-3/01-introduction.md?raw'
 import chapter1of4 from './chapter-4/01-introduction.md?raw'
-
-
 
 import type { Episode } from '../../types/episode'
 import { parseArticleMarkdown } from '../../utils/articleMarkdown'
@@ -52,6 +49,12 @@ export const episodes: Episode[] = [
         title: 'Modern-day Impact',
         blocks: parseArticleMarkdown(chapter5of1),
       },
+      {
+        id: 'subchapter-6',
+        number: 6,
+        title: 'Subchapter 6',
+        blocks: parseArticleMarkdown(chapter6of1),
+      },
     ],
   },
   {
@@ -60,7 +63,7 @@ export const episodes: Episode[] = [
     sections: [
       {
         id: 'introduction',
-        number: 0,
+        number: 1,
         title: 'Introduction',
         blocks: parseArticleMarkdown(chapter1of2),
       },
@@ -72,31 +75,31 @@ export const episodes: Episode[] = [
     sections: [
       {
         id: 'introduction',
-        number: 0,
+        number: 1,
         title: 'Introduction',
         blocks: parseArticleMarkdown(chapter1of3),
       },
       {
         id: 'foundations',
-        number: 1,
+        number: 2,
         title: 'Foundations',
         blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme'),
       },
       {
         id: 'urban-form',
-        number: 2,
+        number: 3,
         title: 'Urban Form',
         blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme\n\nmeme'),
       },
       {
         id: 'infrastructure',
-        number: 3,
+        number: 4,
         title: 'Infrastructure',
         blocks: parseArticleMarkdown('meme\n\nmeme'),
       },
       {
         id: 'contemporary-afterlives',
-        number: 4,
+        number: 5,
         title: 'Contemporary Afterlives',
         blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme'),
       },
@@ -108,7 +111,7 @@ export const episodes: Episode[] = [
     sections: [
       {
         id: 'introduction',
-        number: 0,
+        number: 1,
         title: 'Introduction',
         blocks: parseArticleMarkdown(chapter1of4),
       },

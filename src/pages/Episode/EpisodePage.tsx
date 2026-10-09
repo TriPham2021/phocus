@@ -27,7 +27,7 @@ export function EpisodePage() {
             title={episode.title ?? `Chapter ${episode.id}`}
             summary={episode.description}
           />
-          {episode.sections.map((section, sectionIndex) => (
+          {episode.sections.map((section) => (
             <div key={section.id}>
               <Section id={section.id} number={section.number} title={section.title}>
                 {section.blocks.length > 0 ? (
@@ -36,9 +36,7 @@ export function EpisodePage() {
                   <p>Editorial content for this subchapter is being prepared.</p>
                 )}
               </Section>
-              {sectionIndex < episode.sections.length - 1 && (
-                <ImageInsertPlaceholder afterSubchapter={section.number} />
-              )}
+              <ImageInsertPlaceholder afterSubchapter={section.number} />
             </div>
           ))}
           <EpisodeNavigation
