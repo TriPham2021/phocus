@@ -15,12 +15,15 @@ export interface EpisodeImage {
   caption: string
 }
 
+export type EpisodeSectionKind = 'article' | 'bibliography'
+
 export interface EpisodeSection {
   id: string
   number: number
   title: string
   blocks: ArticleTextBlock[]
   images?: EpisodeImage[]
+  kind?: EpisodeSectionKind
 }
 
 export interface Episode {

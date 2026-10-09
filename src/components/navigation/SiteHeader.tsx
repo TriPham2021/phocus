@@ -3,10 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { episodes } from '../../data/episodes/episodes'
 import { PageContainer } from '../layout/PageContainer'
 
-const navigationLinks = [
-  { label: 'About', to: '/about' },
-  { label: 'References', to: '/references' },
-]
+const navigationLinks = [{ label: 'About', to: '/about' }]
 
 const THEME_STORAGE_KEY = 'phocus-theme'
 const TEXT_SIZE_STORAGE_KEY = 'phocus-text-size'

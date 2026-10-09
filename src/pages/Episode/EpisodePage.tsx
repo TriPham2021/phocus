@@ -4,6 +4,7 @@ import { SidebarTableOfContents } from '../../components/episode/SidebarTableOfC
 import { ArticleBody } from '../../components/journal/ArticleBody'
 import { ArticleHeader } from '../../components/journal/ArticleHeader'
 import { ArticleLayout } from '../../components/journal/ArticleLayout'
+import { Bibliography } from '../../components/journal/Bibliography'
 import { ImageInsertPlaceholder } from '../../components/journal/ImageInsertPlaceholder'
 import { Section } from '../../components/journal/Section'
 import { PageContainer } from '../../components/layout/PageContainer'
@@ -30,16 +31,20 @@ export function EpisodePage() {
           {episode.sections.map((section) => (
             <div key={section.id}>
               <Section id={section.id} number={section.number} title={section.title}>
-                {section.blocks.length > 0 ? (
+                {section.kind === 'bibliography' ? (
+                  <Bibliography entries={section.blocks} />
+                ) : section.blocks.length > 0 ? (
                   <ArticleBody blocks={section.blocks} />
                 ) : (
                   <p>Editorial content for this subchapter is being prepared.</p>
                 )}
               </Section>
-              <ImageInsertPlaceholder
-                afterSubchapter={section.number}
-                images={section.images}
-              />
+              {section.kind !== 'bibliography' && (
+                <ImageInsertPlaceholder
+                  afterSubchapter={section.number}
+                  images={section.images}
+                />
+              )}
             </div>
           ))}
           <EpisodeNavigation

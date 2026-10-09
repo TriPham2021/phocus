@@ -55,7 +55,6 @@ index.html
 | `/chapters`            | Chapter portal        |
 | `/episodes/:episodeId` | Reusable chapter page |
 | `/about`               | Project context       |
-| `/references`          | General references    |
 | `*`                    | Not found             |
 
 The URL and internal data model retain the historical term “episode,” while visible navigation calls them “chapters.” Do not introduce a third term. A future terminology migration should be coordinated across routes, types, data, components, and documentation.
@@ -105,6 +104,7 @@ Image assets are organised by chapter and subchapter: `src/assets/images/chapter
 ### Current chapter-source conventions
 
 - Chapter 1 imports six Markdown files, named sequentially from `01-introduction.md` through `06-subchapter-6.md`, and currently uses Subchapters `1` through `6`.
+- Chapter 1 also has Subchapter `7`, `07-bibliography.md`. It uses the `bibliography` section kind, which renders its Markdown blocks as a numbered citation list and intentionally has no image-insert slots.
 - Chapters 2 and 4 currently have empty Markdown-backed introductions at Subchapter `1`.
 - Chapter 3 has an empty Markdown-backed introduction at Subchapter `1`, plus temporary inline placeholder blocks numbered `2` through `5`. Replace those placeholders with imported Markdown files when editorial copy is available.
 - Preserve the existing section numbers for a chapter unless a renumbering is explicitly requested. New sections should follow the chapter's established sequence.

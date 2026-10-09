@@ -4,7 +4,6 @@ import { ChaptersPage } from '../pages/Chapters/ChaptersPage'
 import { EpisodePage } from '../pages/Episode/EpisodePage'
 import { HomePage } from '../pages/Home/HomePage'
 import { NotFoundPage } from '../pages/NotFoundPage'
-import { ReferencesPage } from '../pages/References/ReferencesPage'
 
 export function AppRoutes() {
   return (
@@ -13,7 +12,6 @@ export function AppRoutes() {
       <Route path="/chapters" element={<ChaptersPage />} />
       <Route path="/episodes/:episodeId" element={<EpisodePage />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/references" element={<ReferencesPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )
