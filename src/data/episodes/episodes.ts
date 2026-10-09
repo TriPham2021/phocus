@@ -52,7 +52,7 @@ export const episodes: Episode[] = [
       {
         id: 'subchapter-6',
         number: 6,
-        title: 'Subchapter 6',
+        title: 'Conclusion',
         blocks: parseArticleMarkdown(chapter6of1),
       },
     ],
