@@ -4,6 +4,8 @@ import chapter3of1 from './chapter-1/03-le-trinh.md?raw'
 import chapter4of1 from './chapter-1/04-hanoi-nguyen.md?raw'
 import chapter5of1 from './chapter-1/05-impact.md?raw'
 import chapter6of1 from './chapter-1/06-subchapter-6.md?raw'
+import chapter1Image1 from '../../assets/images/1-1-1.jpg'
+import chapter1Image2 from '../../assets/images/1-1-2.jpg'
 
 import chapter1of2 from './chapter-2/01-introduction.md?raw'
 import chapter1of3 from './chapter-3/01-introduction.md?raw'
@@ -24,6 +26,18 @@ export const episodes: Episode[] = [
         number: 1,
         title: 'Introduction',
         blocks: parseArticleMarkdown(chapter1of1),
+        images: [
+          {
+            src: chapter1Image1,
+            alt: 'Chapter 1, Subchapter 1, Image 1',
+            caption: 'Chapter 1 · Subchapter 1 · Image 1',
+          },
+          {
+            src: chapter1Image2,
+            alt: 'Chapter 1, Subchapter 1, Image 2',
+            caption: 'Chapter 1 · Subchapter 1 · Image 2',
+          },
+        ],
       },
       {
         id: 'foundations',

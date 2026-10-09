@@ -36,7 +36,10 @@ export function EpisodePage() {
                   <p>Editorial content for this subchapter is being prepared.</p>
                 )}
               </Section>
-              <ImageInsertPlaceholder afterSubchapter={section.number} />
+              <ImageInsertPlaceholder
+                afterSubchapter={section.number}
+                images={section.images}
+              />
             </div>
           ))}
           <EpisodeNavigation

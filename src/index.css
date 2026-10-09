@@ -463,6 +463,14 @@ h3 {
   color: var(--color-moss);
   font-size: var(--text-sm);
 }
+
+.article-figure > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
 .article-caption {
   margin-top: 0.75rem;
   color: var(--color-moss);

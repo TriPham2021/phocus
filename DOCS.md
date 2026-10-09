@@ -100,6 +100,8 @@ Vite imports these files with `?raw` at build time. `src/utils/articleMarkdown.t
 
 Every rendered subchapter ends with a responsive two-slot image-insert placeholder. The slots stack on narrow screens and each retains the standard editorial caption, ready for future images, maps, or archival figures.
 
+Image assets use the filename convention `chapter-subchapter-image` (for example, `1-1-1.jpg` is Chapter 1, Subchapter 1, Image 1). Register assets in the matching section's `images` array in `src/data/episodes/episodes.ts`; unused slots remain placeholders.
+
 ### Current chapter-source conventions
 
 - Chapter 1 imports six Markdown files, named sequentially from `01-introduction.md` through `06-subchapter-6.md`, and currently uses Subchapters `1` through `6`.

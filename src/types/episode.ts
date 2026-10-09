@@ -9,11 +9,18 @@ export interface ArticleTextBlock {
   citation?: string
 }
 
+export interface EpisodeImage {
+  src: string
+  alt: string
+  caption: string
+}
+
 export interface EpisodeSection {
   id: string
   number: number
   title: string
   blocks: ArticleTextBlock[]
+  images?: EpisodeImage[]
 }
 
 export interface Episode {
