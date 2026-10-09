@@ -30,12 +30,12 @@ export const episodes: Episode[] = [
           {
             src: chapter1Image1,
             alt: 'Chapter 1, Subchapter 1, Image 1',
-            caption: 'Chapter 1 · Subchapter 1 · Image 1',
+            caption: 'Hang Bac Street, Hanoi',
           },
           {
             src: chapter1Image2,
             alt: 'Chapter 1, Subchapter 1, Image 2',
-            caption: 'Chapter 1 · Subchapter 1 · Image 2',
+            caption: 'Ngu Giap Communal House, Hang Cot Street, Hanoi',
           },
         ],
       },
