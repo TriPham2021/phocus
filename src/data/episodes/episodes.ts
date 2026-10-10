@@ -189,35 +189,11 @@ export const episodes: Episode[] = [
     id: '3',
     description: 'Chapter three is being prepared.',
     sections: [
-      {
+       {
         id: 'introduction',
         number: 1,
         title: 'Introduction',
         blocks: parseArticleMarkdown(chapter1of3),
-      },
-      {
-        id: 'foundations',
-        number: 2,
-        title: 'Foundations',
-        blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme'),
-      },
-      {
-        id: 'urban-form',
-        number: 3,
-        title: 'Urban Form',
-        blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme\n\nmeme'),
-      },
-      {
-        id: 'infrastructure',
-        number: 4,
-        title: 'Infrastructure',
-        blocks: parseArticleMarkdown('meme\n\nmeme'),
-      },
-      {
-        id: 'contemporary-afterlives',
-        number: 5,
-        title: 'Contemporary Afterlives',
-        blocks: parseArticleMarkdown('meme\n\nmeme\n\nmeme'),
       },
     ],
   },

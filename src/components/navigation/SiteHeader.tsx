@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../../assets/images/Logo.png'
 import { episodes } from '../../data/episodes/episodes'
 import { PageContainer } from '../layout/PageContainer'
 
@@ -95,14 +96,18 @@ export function SiteHeader() {
     <header className="border-b border-[var(--color-rule)]">
       <PageContainer>
         <nav
-          className="flex min-h-18 flex-col items-start justify-between gap-3 py-4 lg:flex-row lg:items-center lg:gap-6"
+          className="flex min-h-18 flex-col items-start justify-between gap-3 py-4 md:flex-row md:items-center md:gap-6"
           aria-label="Primary navigation"
         >
-          <Link className="site-masthead" to="/">
-            <span className="site-masthead__accent">(phố)</span>
-            <span>cus</span>
+          <Link
+            aria-label="Phốcus home"
+            className="site-masthead self-start md:order-1"
+            to="/"
+          >
+            <img alt="" className="site-masthead__logo" src={logo} />
+            <span>Phốcus</span>
           </Link>
-          <div className="flex w-full flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:gap-x-5 lg:w-auto">
+          <div className="flex w-full flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:gap-x-5 md:order-2 md:ml-auto md:w-auto">
             <div
               className="relative"
               onMouseEnter={openChapters}
