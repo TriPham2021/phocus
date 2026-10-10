@@ -334,24 +334,18 @@ h3 {
 }
 .site-masthead {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.1em;
+  align-items: center;
+  gap: 0.65rem;
   font-family: var(--font-serif);
   font-size: clamp(1.35rem, 2vw, 1.75rem);
   font-weight: 600;
-  letter-spacing: -0.04em;
   color: var(--color-ink);
 }
-.site-masthead__accent {
-  color: var(--color-brick);
-  font-family: var(--font-mono);
-  font-size: 0.72em;
-  letter-spacing: 0.02em;
-  transition: color 180ms ease;
-}
-.site-masthead:hover .site-masthead__accent,
-.site-masthead:focus-visible .site-masthead__accent {
-  color: var(--color-ochre);
+.site-masthead__logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: none;
+  object-fit: contain;
 }
 .page-container {
   width: calc(100% - (var(--space-page) * 2));
