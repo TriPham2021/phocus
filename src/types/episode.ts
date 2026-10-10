@@ -13,6 +13,7 @@ export interface EpisodeImage {
   src: string
   alt: string
   caption: string
+  sourceUrl?: string
 }
 
 export type EpisodeSectionKind = 'article' | 'bibliography'

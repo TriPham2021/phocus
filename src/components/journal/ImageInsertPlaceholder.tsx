@@ -8,7 +8,6 @@ interface ImageInsertPlaceholderProps {
 
 const placeholderCaption =
   'Reserved for one or more editorial images, maps, or archival figures.'
-const placeholderSourceUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
 
 export function ImageInsertPlaceholder({
   afterSubchapter,
@@ -23,11 +22,10 @@ export function ImageInsertPlaceholder({
           <Figure
             alt={image.alt}
             caption={image.caption}
+            imageSrc={image.src}
             key={image.src}
-            sourceUrl={placeholderSourceUrl}
-          >
-            <img alt={image.alt} src={image.src} />
-          </Figure>
+            sourceUrl={image.sourceUrl}
+          />
         ) : (
           <Figure
             alt={`Reserved image insert ${imageNumber} after Subchapter ${afterSubchapter}`}
