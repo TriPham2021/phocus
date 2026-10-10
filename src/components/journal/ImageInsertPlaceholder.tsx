@@ -19,9 +19,13 @@ export function ImageInsertPlaceholder({
         const image = images[imageNumber - 1]
 
         return image ? (
-          <Figure alt={image.alt} caption={image.caption} key={image.src}>
-            <img alt={image.alt} src={image.src} />
-          </Figure>
+          <Figure
+            alt={image.alt}
+            caption={image.caption}
+            imageSrc={image.src}
+            key={image.src}
+            sourceUrl={image.sourceUrl}
+          />
         ) : (
           <Figure
             alt={`Reserved image insert ${imageNumber} after Subchapter ${afterSubchapter}`}

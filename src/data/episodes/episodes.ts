@@ -42,11 +42,15 @@ export const episodes: Episode[] = [
             src: chapter1Image1,
             alt: 'Hang Bac Street, Hanoi',
             caption: 'Hang Bac Street, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Hanoi_-_H%C3%A0ng_B%E1%BA%A1c_Street_-_1.jpg',
           },
           {
             src: chapter1Image2,
             alt: 'Ngu Giap Communal House on Hang Cot Street, Hanoi',
             caption: 'Ngu Giap Communal House, Hang Cot Street, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Old_Quarter,_Hanoi_(26)_(37781255424).jpg',
           },
         ],
       },
@@ -60,11 +64,15 @@ export const episodes: Episode[] = [
             src: chapter2Image1,
             alt: 'Ceramic architectural fragments in Hanoi',
             caption: 'Ceramic architectural fragments, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:National_Museum_Vietnamese_History_38.jpg',
           },
           {
             src: chapter2Image2,
             alt: 'Carved dragon medallion in Hanoi',
             caption: 'Carved dragon medallion, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:National_Museum_Vietnamese_History_53.jpg',
           },
         ],
       },
@@ -78,11 +86,15 @@ export const episodes: Episode[] = [
             src: chapter3Image1,
             alt: 'Gate at the Temple of Literature, Hanoi',
             caption: 'Temple of Literature, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Hanoi_Temple_of_Literature.jpg',
           },
           {
             src: chapter3Image2,
             alt: 'Stone dragon stairway in Hanoi',
             caption: 'Stone dragon stairway, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Hanoi_Citadel_0357.JPG',
           },
         ],
       },
@@ -96,11 +108,15 @@ export const episodes: Episode[] = [
             src: chapter4Image1,
             alt: 'North Gate of the Hanoi Citadel',
             caption: 'North Gate, Hanoi Citadel',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:B%E1%BA%AFc_M%C3%B4n,_v%E1%BA%BFt_%C4%91%E1%BA%A1i_b%C3%A1c.JPG',
           },
           {
             src: chapter4Image2,
             alt: 'Hanoi Flag Tower',
             caption: 'Hanoi Flag Tower',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Flag_tower,_Hanoi.jpg',
           },
         ],
       },
@@ -114,11 +130,15 @@ export const episodes: Episode[] = [
             src: chapter5Image1,
             alt: 'Turtle Tower on Hoan Kiem Lake, Hanoi',
             caption: 'Turtle Tower, Hoan Kiem Lake, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Hanoi_-_Turtle_Tower_(Th%C3%A1p_R%C3%B9a),_Ho%C3%A0n_Ki%E1%BA%BFm_Lake.jpg',
           },
           {
             src: chapter5Image2,
             alt: 'Street corner in Hanoi Old Quarter',
             caption: 'Old Quarter street corner, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Ph%E1%BB%91_V%C4%83n_Mi%E1%BA%BFu_ng%C3%A0y_nay.jpg',
           },
         ],
       },
@@ -132,11 +152,15 @@ export const episodes: Episode[] = [
             src: chapter6Image1,
             alt: 'Lantern shop on Hang Ma Street, Hanoi',
             caption: 'Lantern shop, Hang Ma Street, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Old_Quarter,_Hanoi_(29)_(37781222654).jpg',
           },
           {
             src: chapter6Image2,
             alt: 'Flooded riverside landscape in Hanoi',
             caption: 'Flooded riverside landscape, Hanoi',
+            sourceUrl:
+              'https://commons.wikimedia.org/wiki/File:Vietnam,_Hanoi,_Panoramic_view_of_Red_River.jpg',
           },
         ],
       },
