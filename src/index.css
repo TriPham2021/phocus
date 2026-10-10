@@ -621,6 +621,10 @@ h3 {
   color: var(--color-moss);
   font-size: var(--text-sm);
 }
+.article-caption__source {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 .chapter-menu {
   width: min(18rem, calc(100vw - (var(--space-page) * 2)));
 }

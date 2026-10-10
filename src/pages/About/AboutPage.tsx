@@ -3,19 +3,19 @@ import { PageIntro } from '../../components/layout/PageIntro'
 
 const teamMembers = [
   {
-    name: 'Mai Anh Nguyen',
-    role: 'Editorial Director',
-    bio: 'Shapes the journal’s research direction and long-form editorial approach.',
+    name: 'Bui Viet Hung',
+    role: 'Content Lead, Researcher',
+    bio: 'Shapes the journal’s research direction and leads the team in developing new content for the site.',
   },
   {
-    name: 'Quang Minh Tran',
-    role: 'Urban Researcher',
-    bio: 'Develops story leads that connect the city’s historical layers to everyday life.',
+    name: 'Pham Minh Tri',
+    role: 'Developer, Designer, Editor',
+    bio: 'Sole developer of the Phốcus website, responsible for its design, development, and maintenance as well as editing and publishing content.',
   },
   {
-    name: 'Linh Pham',
-    role: 'Visual Editor',
-    bio: 'Curates photography, maps, and archival material for each chapter.',
+    name: 'Dao Tung Lam',
+    role: 'Writer, Editor',
+    bio: 'Writes and edits content for the journal, shaping the narrative of Phốcus through its articles and essays.',
   },
 ]
 

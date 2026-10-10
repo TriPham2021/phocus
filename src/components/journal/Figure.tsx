@@ -5,9 +5,10 @@ interface FigureProps {
   alt: string
   caption?: string
   children?: ReactNode
+  sourceUrl?: string
 }
 
-export function Figure({ alt, caption, children }: FigureProps) {
+export function Figure({ alt, caption, children, sourceUrl }: FigureProps) {
   return (
     <figure className="article-figure">
       {children ?? (
@@ -15,7 +16,7 @@ export function Figure({ alt, caption, children }: FigureProps) {
           Figure asset placeholder
         </div>
       )}
-      {caption && <Caption>{caption}</Caption>}
+      {caption && <Caption sourceUrl={sourceUrl}>{caption}</Caption>}
     </figure>
   )
 }
