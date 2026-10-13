@@ -8,6 +8,11 @@ export function SiteFooter() {
           Phốcus
         </span>{' '}
         &middot; Urban Planning &amp; Infrastructure
+        <div className="mt-4 text-[var(--color-slate)] opacity-80">
+          <a href="mailto:phocusprojecthn@gmail.com" className="hover:underline">
+            phocusprojecthn@gmail.com
+          </a>
+        </div>
       </PageContainer>
     </footer>
   )
