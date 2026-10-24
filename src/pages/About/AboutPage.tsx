@@ -1,21 +1,27 @@
 import { PageContainer } from '../../components/layout/PageContainer'
 import { PageIntro } from '../../components/layout/PageIntro'
+import buiImage from '../../assets/images/buiviethung.jpg'
+import phamImage from '../../assets/images/phamminhtri.jpg'
+import daoImage from '../../assets/images/daotunglam.jpg'
 
 const teamMembers = [
   {
     name: 'Bui Viet Hung',
     role: 'Content Lead, Researcher',
-    bio: 'Shapes the journal’s research direction and leads the team in developing new content for the site.',
+    bio: 'As a primary content developer, Viet Hung shapes the general direction of the journal and the content of our analysis & line of research. He also manages the project’s social media account.',
+    photo: buiImage,
   },
   {
     name: 'Pham Minh Tri',
     role: 'Developer, Designer, Editor',
-    bio: 'Sole developer of the Phốcus website, responsible for its design, development, and maintenance as well as editing and publishing content.',
+    bio: 'The sole architect of our website, Minh Tri is instrumental in developing our (phố)cus platform while also playing a pivotal role in drafting and research direction.',
+    photo: phamImage,
   },
   {
     name: 'Dao Tung Lam',
     role: 'Writer, Editor',
-    bio: 'Writes and edits content for the journal, shaping the narrative of Phốcus through its articles and essays.',
+    bio: 'A key contributor to the drafting and synthesis process, Tung Lam crafts readable narratives from academic sources and historical archives. He also manages the stylistic decisions of our posts and website.',
+    photo: daoImage,
   },
 ]
 
@@ -72,6 +78,7 @@ export function AboutPage() {
         <div className="about-team-grid">
           {teamMembers.map((member) => (
             <article className="about-team-member" key={member.name}>
+                <img src={member.photo} alt={member.name} className="about-team-member__image mx-auto mt-4 mb-2 max-w-xs w-full" />
               <h3>{member.name}</h3>
               <p className="about-team-member__role">{member.role}</p>
               <p>{member.bio}</p>

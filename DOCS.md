@@ -158,3 +158,7 @@ Keep new state close to the interaction that owns it. Introduce shared state onl
 - Do not add frameworks or utility libraries without a clear, scoped need.
 
 For code, route, style, or structure changes, run `npm run lint` and, when applicable, `npm run build`.
+
+## Bibliography links
+
+All URLs appearing in bibliography entries are rendered as clickable links that open in a new tab. The `Bibliography` component automatically converts plain URLs into <a> tags with underline styling.
